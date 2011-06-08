@@ -1,0 +1,7 @@
+*.swp
+.erlang-built
+.karajan-built
+Karajan/
+build/
+lib/
+otp_src_R14B03*
