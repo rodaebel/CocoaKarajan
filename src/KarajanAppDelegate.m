@@ -99,15 +99,15 @@
     [task setArguments:[NSArray arrayWithObjects:karajandConfig, nil]];
 
     NSFileHandle *fh = [p_out fileHandleForReading];
-	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
-	[nc addObserver:self selector:@selector(dataReady:) name:NSFileHandleReadCompletionNotification object:fh];
+    [nc addObserver:self selector:@selector(dataReady:) name:NSFileHandleReadCompletionNotification object:fh];
     
-	[nc addObserver:self selector:@selector(taskTerminated:) name:NSTaskDidTerminateNotification object:task];
+    [nc addObserver:self selector:@selector(taskTerminated:) name:NSTaskDidTerminateNotification object:task];
     
-  	[task launch];
+    [task launch];
 
-  	[fh readInBackgroundAndNotify];
+    [fh readInBackgroundAndNotify];
 
     return YES;
 }
