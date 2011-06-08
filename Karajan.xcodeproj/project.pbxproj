@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F65FFD54139B974C00E0C782 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = F65FFD53139B974C00E0C782 /* lib */; };
+		F65FFD58139BB62900E0C782 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F65FFD56139BB62900E0C782 /* Localizable.strings */; };
+		F69C6AF5139AEB71004A4063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69C6AF4139AEB71004A4063 /* Cocoa.framework */; };
+		F69C6AFF139AEB71004A4063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F69C6AFD139AEB71004A4063 /* InfoPlist.strings */; };
+		F69C6B02139AEB71004A4063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F69C6B01139AEB71004A4063 /* main.m */; };
+		F69C6B05139AEB71004A4063 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F69C6B03139AEB71004A4063 /* Credits.rtf */; };
+		F69C6B08139AEB71004A4063 /* KarajanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F69C6B07139AEB71004A4063 /* KarajanAppDelegate.m */; };
+		F69C6B0B139AEB71004A4063 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69C6B09139AEB71004A4063 /* MainMenu.xib */; };
+		F6BE06FE139B5FF900282C2D /* Karajan_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = F6BE06FD139B5FF900282C2D /* Karajan_alt.png */; };
+		F6F30532139B93AB00F92B70 /* Karajan in Resources */ = {isa = PBXBuildFile; fileRef = F6F30531139B93AB00F92B70 /* Karajan */; };
+		F6FE1562139AF91E002D0EF8 /* Karajan.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FE1561139AF91E002D0EF8 /* Karajan.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F65FFD53139B974C00E0C782 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = SOURCE_ROOT; };
+		F65FFD57139BB62900E0C782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		F69C6AF0139AEB71004A4063 /* Karajan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karajan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69C6AF4139AEB71004A4063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F69C6AF7139AEB71004A4063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F69C6AF8139AEB71004A4063 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F69C6AF9139AEB71004A4063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F69C6AFC139AEB71004A4063 /* Karajan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Karajan-Info.plist"; path = "src/Karajan-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F69C6AFE139AEB71004A4063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F69C6B00139AEB71004A4063 /* Karajan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Karajan-Prefix.pch"; path = "src/Karajan-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		F69C6B01139AEB71004A4063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
+		F69C6B04139AEB71004A4063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F69C6B06139AEB71004A4063 /* KarajanAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KarajanAppDelegate.h; path = src/KarajanAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		F69C6B07139AEB71004A4063 /* KarajanAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KarajanAppDelegate.m; path = src/KarajanAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		F69C6B0A139AEB71004A4063 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F6BE06FD139B5FF900282C2D /* Karajan_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Karajan_alt.png; path = src/Karajan_alt.png; sourceTree = SOURCE_ROOT; };
+		F6F30531139B93AB00F92B70 /* Karajan */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Karajan; sourceTree = SOURCE_ROOT; };
+		F6FE1561139AF91E002D0EF8 /* Karajan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Karajan.png; path = src/Karajan.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F69C6AED139AEB71004A4063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F69C6AF5139AEB71004A4063 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F69C6AE5139AEB71004A4063 = {
+			isa = PBXGroup;
+			children = (
+				F69C6AFA139AEB71004A4063 /* Karajan */,
+				F69C6AF3139AEB71004A4063 /* Frameworks */,
+				F69C6AF1139AEB71004A4063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F69C6AF1139AEB71004A4063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69C6AF0139AEB71004A4063 /* Karajan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F69C6AF3139AEB71004A4063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F69C6AF4139AEB71004A4063 /* Cocoa.framework */,
+				F69C6AF6139AEB71004A4063 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F69C6AF6139AEB71004A4063 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F69C6AF7139AEB71004A4063 /* AppKit.framework */,
+				F69C6AF8139AEB71004A4063 /* CoreData.framework */,
+				F69C6AF9139AEB71004A4063 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F69C6AFA139AEB71004A4063 /* Karajan */ = {
+			isa = PBXGroup;
+			children = (
+				F69C6B06139AEB71004A4063 /* KarajanAppDelegate.h */,
+				F69C6B07139AEB71004A4063 /* KarajanAppDelegate.m */,
+				F69C6B09139AEB71004A4063 /* MainMenu.xib */,
+				F69C6AFB139AEB71004A4063 /* Supporting Files */,
+				F6F3052F139B934300F92B70 /* Components */,
+			);
+			path = Karajan;
+			sourceTree = "<group>";
+		};
+		F69C6AFB139AEB71004A4063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F65FFD56139BB62900E0C782 /* Localizable.strings */,
+				F6FE1561139AF91E002D0EF8 /* Karajan.png */,
+				F6BE06FD139B5FF900282C2D /* Karajan_alt.png */,
+				F69C6AFC139AEB71004A4063 /* Karajan-Info.plist */,
+				F69C6AFD139AEB71004A4063 /* InfoPlist.strings */,
+				F69C6B00139AEB71004A4063 /* Karajan-Prefix.pch */,
+				F69C6B01139AEB71004A4063 /* main.m */,
+				F69C6B03139AEB71004A4063 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6F3052F139B934300F92B70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6F30531139B93AB00F92B70 /* Karajan */,
+				F65FFD53139B974C00E0C782 /* lib */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F69C6AEF139AEB71004A4063 /* Karajan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F69C6B0E139AEB71004A4063 /* Build configuration list for PBXNativeTarget "Karajan" */;
+			buildPhases = (
+				F69C6AEC139AEB71004A4063 /* Sources */,
+				F69C6AED139AEB71004A4063 /* Frameworks */,
+				F69C6AEE139AEB71004A4063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Karajan;
+			productName = Karajan;
+			productReference = F69C6AF0139AEB71004A4063 /* Karajan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F69C6AE7139AEB71004A4063 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F69C6AEA139AEB71004A4063 /* Build configuration list for PBXProject "Karajan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F69C6AE5139AEB71004A4063;
+			productRefGroup = F69C6AF1139AEB71004A4063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F69C6AEF139AEB71004A4063 /* Karajan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F69C6AEE139AEB71004A4063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F69C6AFF139AEB71004A4063 /* InfoPlist.strings in Resources */,
+				F69C6B05139AEB71004A4063 /* Credits.rtf in Resources */,
+				F69C6B0B139AEB71004A4063 /* MainMenu.xib in Resources */,
+				F6FE1562139AF91E002D0EF8 /* Karajan.png in Resources */,
+				F6BE06FE139B5FF900282C2D /* Karajan_alt.png in Resources */,
+				F6F30532139B93AB00F92B70 /* Karajan in Resources */,
+				F65FFD54139B974C00E0C782 /* lib in Resources */,
+				F65FFD58139BB62900E0C782 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F69C6AEC139AEB71004A4063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F69C6B02139AEB71004A4063 /* main.m in Sources */,
+				F69C6B08139AEB71004A4063 /* KarajanAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F65FFD56139BB62900E0C782 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F65FFD57139BB62900E0C782 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F69C6AFD139AEB71004A4063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F69C6AFE139AEB71004A4063 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		F69C6B03139AEB71004A4063 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F69C6B04139AEB71004A4063 /* en */,
+			);
+			name = Credits.rtf;
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		F69C6B09139AEB71004A4063 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F69C6B0A139AEB71004A4063 /* en */,
+			);
+			name = MainMenu.xib;
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F69C6B0C139AEB71004A4063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F69C6B0D139AEB71004A4063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F69C6B0F139AEB71004A4063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/Karajan-Prefix.pch";
+				INFOPLIST_FILE = "src/Karajan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F69C6B10139AEB71004A4063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/Karajan-Prefix.pch";
+				INFOPLIST_FILE = "src/Karajan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F69C6AEA139AEB71004A4063 /* Build configuration list for PBXProject "Karajan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F69C6B0C139AEB71004A4063 /* Debug */,
+				F69C6B0D139AEB71004A4063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F69C6B0E139AEB71004A4063 /* Build configuration list for PBXNativeTarget "Karajan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F69C6B0F139AEB71004A4063 /* Debug */,
+				F69C6B10139AEB71004A4063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F69C6AE7139AEB71004A4063 /* Project object */;
+}
