@@ -2,10 +2,10 @@
 Cocoa Karajan
 =============
 
-The Cocoa `Karajan <http://github.com/rodaebel/Karajan>`_ project delivers a
-precompiled version of the Karajan platform bundled with all dependencies for
-Mac OS X. It also delivers a user interface for running and configuring Karajan
-and additional modules.
+The Cocoa Karajan project delivers a precompiled version of the `Karajan
+<http://github.com/rodaebel/Karajan>`_ platform bundled with all dependencies
+for Mac OS X. It also delivers a user interface for running and configuring
+Karajan and additional modules.
 
 
 Copyright and License
