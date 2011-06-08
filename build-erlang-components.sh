@@ -65,7 +65,7 @@ build_karajan()
 # The main function
 main() {
 
-  if [ ! -e "otp_src_${ERLANG_VERSION}.tar.gz" ]; then
+  if [ ! -e "otp_src_${ERLANG_VERSION}.tar.gz" ] && [ ! -d "otp_src_${ERLANG_VERSION}" ]; then
     fetch_erlang
   fi
 
