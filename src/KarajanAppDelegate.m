@@ -6,6 +6,7 @@
 //
 
 #import "KarajanAppDelegate.h"
+#import "KarajanPreferences.h"
 
 @implementation KarajanAppDelegate
 
@@ -119,6 +120,12 @@
     [task terminate];
 
     return NO;
+}
+
+- (IBAction)openPreferences:(id)sender
+{
+    [[KarajanPreferences sharedPrefsWindowController] showWindow:nil];
+    (void)sender;
 }
 
 @end

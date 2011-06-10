@@ -15,6 +15,8 @@
 		F69C6B05139AEB71004A4063 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F69C6B03139AEB71004A4063 /* Credits.rtf */; };
 		F69C6B08139AEB71004A4063 /* KarajanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F69C6B07139AEB71004A4063 /* KarajanAppDelegate.m */; };
 		F69C6B0B139AEB71004A4063 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69C6B09139AEB71004A4063 /* MainMenu.xib */; };
+		F6A9E83F13A2BE3700BEA54C /* KarajanPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A9E83E13A2BE3700BEA54C /* KarajanPreferences.m */; };
+		F6A9E84313A2C23F00BEA54C /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A9E84113A2C23F00BEA54C /* Preferences.xib */; };
 		F6BE06FE139B5FF900282C2D /* Karajan_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = F6BE06FD139B5FF900282C2D /* Karajan_alt.png */; };
 		F6F30532139B93AB00F92B70 /* Karajan in Resources */ = {isa = PBXBuildFile; fileRef = F6F30531139B93AB00F92B70 /* Karajan */; };
 		F6FE1562139AF91E002D0EF8 /* Karajan.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FE1561139AF91E002D0EF8 /* Karajan.png */; };
@@ -36,6 +38,9 @@
 		F69C6B06139AEB71004A4063 /* KarajanAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KarajanAppDelegate.h; path = src/KarajanAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F69C6B07139AEB71004A4063 /* KarajanAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KarajanAppDelegate.m; path = src/KarajanAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		F69C6B0A139AEB71004A4063 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F6A9E83D13A2BE3700BEA54C /* KarajanPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KarajanPreferences.h; path = src/KarajanPreferences.h; sourceTree = SOURCE_ROOT; };
+		F6A9E83E13A2BE3700BEA54C /* KarajanPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KarajanPreferences.m; path = src/KarajanPreferences.m; sourceTree = SOURCE_ROOT; };
+		F6A9E84213A2C23F00BEA54C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = src/en.lproj/Preferences.xib; sourceTree = SOURCE_ROOT; };
 		F6BE06FD139B5FF900282C2D /* Karajan_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Karajan_alt.png; path = src/Karajan_alt.png; sourceTree = SOURCE_ROOT; };
 		F6F30531139B93AB00F92B70 /* Karajan */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Karajan; sourceTree = SOURCE_ROOT; };
 		F6FE1561139AF91E002D0EF8 /* Karajan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Karajan.png; path = src/Karajan.png; sourceTree = SOURCE_ROOT; };
@@ -94,7 +99,10 @@
 			children = (
 				F69C6B06139AEB71004A4063 /* KarajanAppDelegate.h */,
 				F69C6B07139AEB71004A4063 /* KarajanAppDelegate.m */,
+				F6A9E83D13A2BE3700BEA54C /* KarajanPreferences.h */,
+				F6A9E83E13A2BE3700BEA54C /* KarajanPreferences.m */,
 				F69C6B09139AEB71004A4063 /* MainMenu.xib */,
+				F6A9E84113A2C23F00BEA54C /* Preferences.xib */,
 				F69C6AFB139AEB71004A4063 /* Supporting Files */,
 				F6F3052F139B934300F92B70 /* Components */,
 			);
@@ -180,6 +188,7 @@
 				F6F30532139B93AB00F92B70 /* Karajan in Resources */,
 				F65FFD54139B974C00E0C782 /* lib in Resources */,
 				F65FFD58139BB62900E0C782 /* Localizable.strings in Resources */,
+				F6A9E84313A2C23F00BEA54C /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +201,7 @@
 			files = (
 				F69C6B02139AEB71004A4063 /* main.m in Sources */,
 				F69C6B08139AEB71004A4063 /* KarajanAppDelegate.m in Sources */,
+				F6A9E83F13A2BE3700BEA54C /* KarajanPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +242,14 @@
 			name = MainMenu.xib;
 			path = src;
 			sourceTree = SOURCE_ROOT;
+		};
+		F6A9E84113A2C23F00BEA54C /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A9E84213A2C23F00BEA54C /* en */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 

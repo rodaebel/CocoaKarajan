@@ -28,4 +28,6 @@
 
 - (BOOL)stopKarajan;
 
+- (IBAction)openPreferences:(id)sender;
+
 @end
