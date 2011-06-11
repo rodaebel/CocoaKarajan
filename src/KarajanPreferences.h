@@ -7,6 +7,7 @@
 
 
 @interface KarajanPreferences : NSWindowController <NSToolbarDelegate> {
+@private
     IBOutlet NSToolbar *toolbar;
     IBOutlet NSView *generalPreferenceView;
     IBOutlet NSView *advancedPreferenceView;
