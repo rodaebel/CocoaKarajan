@@ -64,6 +64,8 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
 {
     int tag = (int)[sender tag];
 
+    [toolbar setSelectedItemIdentifier:[(NSToolbarItem *)sender itemIdentifier]];
+
     NSView *view = [self viewForTag:tag];
     NSView *previousView = [self viewForTag:currentViewTag];
     currentViewTag = tag;
@@ -108,6 +110,14 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
         field.objectValue = panel.filename;
         [[NSUserDefaults standardUserDefaults] setValue:panel.filename forKey:@"configPath"];
     }
+}
+
+- (IBAction)restoreDefaults:(id)sender
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults willChangeValueForKey:@"configPath"];
+    [userDefaults removeObjectForKey:@"configPath"];
+    [userDefaults didChangeValueForKey:@"configPath"];
 }
 
 @end

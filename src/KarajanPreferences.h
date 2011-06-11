@@ -28,4 +28,6 @@
 
 - (void)filePickerDidEnd:(NSSavePanel *)save returnCode:(int)returnCode context:(void*)context;
 
+- (IBAction)restoreDefaults:(id)sender;
+
 @end
