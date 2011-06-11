@@ -90,7 +90,7 @@
     NSString *karajandPath = [NSString stringWithFormat:@"%@/Karajan/bin/karajand", bundleResourcePath];
     NSString *configPath = [[NSUserDefaults standardUserDefaults] valueForKey:@"configPath"];
     NSString *modulesPath = ([configPath length] == 0) ? @"" : [NSString stringWithFormat:@"--path=%@", [configPath stringByDeletingLastPathComponent]];
-        
+
     NSString *karajandConfig = [NSString stringWithFormat:@"--config=%@", configPath];
 
     [task setStandardInput:p_in];
@@ -104,11 +104,11 @@
 
     NSFileHandle *fh = [p_out fileHandleForReading];
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    
+
     [nc addObserver:self selector:@selector(dataReady:) name:NSFileHandleReadCompletionNotification object:fh];
-    
+
     [nc addObserver:self selector:@selector(taskTerminated:) name:NSTaskDidTerminateNotification object:task];
-    
+
     [task launch];
 
     [fh readInBackgroundAndNotify];
