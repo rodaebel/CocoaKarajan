@@ -23,18 +23,22 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     return @"Preferences";
 }
 
-- (void) dealloc {
+- (void) dealloc
+{
     [super dealloc];
 }
 
-- (void)awakeFromNib{
+- (void)awakeFromNib
+{
     [self.window setContentSize:[generalPreferenceView frame].size];
     [[self.window contentView] addSubview:generalPreferenceView];
     [toolbar setSelectedItemIdentifier:@"General"];
     [self.window center];
+    [self.window becomeMainWindow];
 }
 
-- (NSView *)viewForTag:(int)tag {
+- (NSView *)viewForTag:(int)tag
+{
     NSView *view = nil;
     switch(tag) {
         case 0: default: view = generalPreferenceView; break;
@@ -43,7 +47,8 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     return view;
 }
 
-- (NSRect)newFrameForNewContentView:(NSView *)view {
+- (NSRect)newFrameForNewContentView:(NSView *)view
+{
     NSRect newFrameRect = [self.window frameRectForContentRect:[view frame]];
     NSRect oldFrameRect = [self.window frame];
     NSSize newSize = newFrameRect.size;
@@ -55,7 +60,8 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     return frame;
 }
 
-- (IBAction)switchView:(id)sender {
+- (IBAction)switchView:(id)sender
+{
     int tag = (int)[sender tag];
 
     NSView *view = [self viewForTag:tag];
@@ -75,8 +81,33 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     [NSAnimationContext endGrouping];
 }
 
-- (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)aToolbar {
+- (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)aToolbar
+{
     return [[aToolbar items] valueForKey:@"itemIdentifier"];
+}
+
+- (IBAction)beginFilePicker:(id)sender
+{
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
+    panel.canChooseDirectories = NO;
+    panel.canChooseFiles = YES;
+    [panel beginSheetForDirectory: nil
+                             file: nil
+                   modalForWindow: configPathTextField.window
+                    modalDelegate: self
+                   didEndSelector: @selector(filePickerDidEnd:returnCode:context:)
+                      contextInfo: configPathTextField];
+}
+
+- (void)filePickerDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode context:(void*)context
+{
+    [panel orderOut:self];
+
+    if(returnCode == NSOKButton) {
+        NSTextField *field = context;
+        field.objectValue = panel.filename;
+        [[NSUserDefaults standardUserDefaults] setValue:panel.filename forKey:@"configPath"];
+    }
 }
 
 @end

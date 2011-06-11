@@ -88,7 +88,10 @@
 
     NSString *erlPath = [NSString stringWithFormat:@"%@/lib/erlang/bin/erl", bundleResourcePath];
     NSString *karajandPath = [NSString stringWithFormat:@"%@/Karajan/bin/karajand", bundleResourcePath];
-    NSString *karajandConfig = [NSString stringWithFormat:@"--config=%@/Karajan/examples/cube.config", bundleResourcePath];
+    NSString *configPath = [[NSUserDefaults standardUserDefaults] valueForKey:@"configPath"];
+    NSString *modulesPath = ([configPath length] == 0) ? @"" : [NSString stringWithFormat:@"--path=%@", [configPath stringByDeletingLastPathComponent]];
+        
+    NSString *karajandConfig = [NSString stringWithFormat:@"--config=%@", configPath];
 
     [task setStandardInput:p_in];
     [task setStandardOutput:p_out];
@@ -97,7 +100,7 @@
 
     [task setEnvironment:environ];
     [task setLaunchPath:karajandPath];
-    [task setArguments:[NSArray arrayWithObjects:karajandConfig, nil]];
+    [task setArguments:[NSArray arrayWithObjects:modulesPath, karajandConfig, nil]];
 
     NSFileHandle *fh = [p_out fileHandleForReading];
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
