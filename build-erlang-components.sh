@@ -17,12 +17,14 @@ ERLC="$ERLANG_HOME/bin/erlc"
 KARAJAN_URL="https://github.com/rodaebel/Karajan.git"
 
 # Fetch the Erlang distribution
-fetch_erlang() {
+fetch_erlang()
+{
   curl -O $ERLANG_DISTRIBUTION_URL
 }
 
 # Build Erlang
-build_erlang() {
+build_erlang()
+{
   rm -rf $ERLANG_HOME
   mkdir -p $ERLANG_HOME
   rm -rf otp_src_${ERLANG_VERSION}
@@ -55,16 +57,12 @@ build_karajan()
   $ESCRIPT rebar get-deps
   $ESCRIPT rebar compile
 
-  # Make examples (optional)
-  cd examples
-  ERLC=$ERLC make
-
   cd $CWD
 }
 
 # The main function
-main() {
-
+main()
+{
   if [ ! -e "otp_src_${ERLANG_VERSION}.tar.gz" ] && [ ! -d "otp_src_${ERLANG_VERSION}" ]; then
     fetch_erlang
   fi
@@ -84,7 +82,6 @@ main() {
     build_karajan
     touch $CWD/.karajan-built
   fi
-
 }
 
 # Call the main function
