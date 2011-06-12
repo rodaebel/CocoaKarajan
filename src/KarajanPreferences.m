@@ -36,9 +36,11 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     [self.window center];
 }
 
-- (void)windowDidLoad
+- (IBAction)showWindow:(id)sender
 {
+    [super showWindow:sender];
     [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+    [self.window makeKeyAndOrderFront:self];
 }
 
 - (NSView *)viewForTag:(int)tag
@@ -95,17 +97,18 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
 - (IBAction)beginFilePicker:(id)sender
 {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
+
     panel.canChooseDirectories = NO;
     panel.canChooseFiles = YES;
-    [panel beginSheetForDirectory: nil
-                             file: nil
-                   modalForWindow: configPathTextField.window
-                    modalDelegate: self
-                   didEndSelector: @selector(filePickerDidEnd:returnCode:context:)
-                      contextInfo: configPathTextField];
+    [panel beginSheetForDirectory:nil
+                             file:nil
+                   modalForWindow:self.window
+                    modalDelegate:self
+                   didEndSelector:@selector(filePickerDidEnd:returnCode:context:)
+                      contextInfo:configPathTextField];
 }
 
-- (void)filePickerDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode context:(void*)context
+- (void)filePickerDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode context:(void *)context
 {
     [panel orderOut:self];
 
