@@ -34,7 +34,11 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     [[self.window contentView] addSubview:generalPreferenceView];
     [toolbar setSelectedItemIdentifier:@"General"];
     [self.window center];
-    [self.window becomeMainWindow];
+}
+
+- (void)windowDidLoad
+{
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
 
 - (NSView *)viewForTag:(int)tag
