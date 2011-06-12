@@ -40,7 +40,7 @@ build_erlang()
 sanitize_erlang()
 {
   cd $ERLANG_HOME
-  perl -pi -e "s@ROOTDIR=${ERLANG_HOME}/lib/erlang@cd \`dirname \\\$0\`\nROOTDIR=\`dirname \"\\\$PWD\" | sed -e 's, ,\\\\\\\\\\\\\\\\ ,g'\`/lib/erlang\ncd -@" bin/erl
+  perl -pi -e "s@ROOTDIR=${ERLANG_HOME}/lib/erlang@CWD=\`pwd\`\ncd \`dirname \\\$0\`\nROOTDIR=\`dirname \"\\\$PWD\" | sed -e 's, ,\\\\\\\\\\\\\\\\ ,g'\`/lib/erlang\ncd \\\$CWD@" bin/erl
   cd -
 }
 
