@@ -12,7 +12,9 @@
 
 @synthesize toggleServingMenuItemLabel;
 
-@synthesize serving;
+@synthesize serving = _serving;
+
+@synthesize netService = _netService;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -64,7 +66,13 @@
 }
 
 - (void)taskTerminated:(NSNotification *)note
-{
+{    
+    if (self.netService != nil) {
+        [self.netService setDelegate:nil];
+        [self.netService stop];
+        self.netService = nil;
+    }
+
     [task release];
     task = nil;
     [p_in release];
@@ -115,6 +123,12 @@
     [task launch];
 
     [fh readInBackgroundAndNotify];
+
+    self.netService = [[[NSNetService alloc] initWithDomain:@"" type:@"_osc._udp." name:@"Karajan" port:(int)preferences.incomingPort] autorelease];
+    if (self.netService != nil) {
+        [self.netService setDelegate:self];
+        [self.netService publishWithOptions:0];
+    }
 
     return YES;
 }
