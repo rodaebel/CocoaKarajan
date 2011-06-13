@@ -15,6 +15,10 @@
     IBOutlet NSTextField *configPathTextField;
 }
 
+@property (getter = getIncomingPort, setter = setIncomingPort:) NSInteger incomingPort;
+
+@property (getter = getOutgoingPort, setter = setOutgoingPort:) NSInteger outgoingPort;
+
 + (KarajanPreferences *)sharedPrefsWindowController;
 
 + (NSString *)nibName;

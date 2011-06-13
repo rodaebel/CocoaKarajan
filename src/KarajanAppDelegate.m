@@ -91,6 +91,10 @@
     NSString *configPath = [[NSUserDefaults standardUserDefaults] valueForKey:@"configPath"];
     NSString *modulesPath = ([configPath length] == 0) ? @"" : [NSString stringWithFormat:@"--path=%@", [configPath stringByDeletingLastPathComponent]];
 
+    KarajanPreferences *preferences = [KarajanPreferences sharedPrefsWindowController];
+    printf("%ld\n", preferences.incomingPort);
+    NSString *incomingPort = [NSString stringWithFormat:@"--incoming-port=%ld", preferences.incomingPort];
+
     NSString *karajandConfig = [NSString stringWithFormat:@"--config=%@", configPath];
 
     [task setStandardInput:p_in];
@@ -100,7 +104,7 @@
 
     [task setEnvironment:environ];
     [task setLaunchPath:karajandPath];
-    [task setArguments:[NSArray arrayWithObjects:modulesPath, karajandConfig, nil]];
+    [task setArguments:[NSArray arrayWithObjects:modulesPath, karajandConfig, incomingPort, nil]];
 
     NSFileHandle *fh = [p_out fileHandleForReading];
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];

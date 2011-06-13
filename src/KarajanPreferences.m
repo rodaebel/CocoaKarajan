@@ -7,8 +7,14 @@
 
 static KarajanPreferences *_sharedPrefsWindowController = nil;
 
+const NSInteger DEFAULT_INCOMING_PORT = 7000;
+
+const NSInteger DEFAULT_OUTGOING_PORT = 7124;
+
 
 @implementation KarajanPreferences
+
+@dynamic incomingPort, outgoingPort;
 
 + (KarajanPreferences *)sharedPrefsWindowController
 {
@@ -41,6 +47,37 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     [super showWindow:sender];
     [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
     [self.window makeKeyAndOrderFront:self];
+}
+
+#pragma mark - NSToolbarDelegate Protocol Methods
+
+- (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)aToolbar
+{
+    return [[aToolbar items] valueForKey:@"itemIdentifier"];
+}
+
+#pragma mark - Karajan Preferences Methods
+
+- (NSInteger)getIncomingPort
+{
+    NSInteger port = [[NSUserDefaults standardUserDefaults] integerForKey:@"incomingPort"];
+    return (port) ? port : DEFAULT_INCOMING_PORT;
+}
+
+- (void)setIncomingPort:(NSInteger)port
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:port forKey:@"incomingPort"];
+}
+
+- (NSInteger)getOutgoingPort
+{
+    NSInteger port = [[NSUserDefaults standardUserDefaults] integerForKey:@"outgoingPort"];
+    return (port) ? port : DEFAULT_OUTGOING_PORT;
+}
+
+- (void)setOutgoingPort:(NSInteger)port
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:port forKey:@"outgoingPort"];
 }
 
 - (NSView *)viewForTag:(int)tag
@@ -87,11 +124,6 @@ static KarajanPreferences *_sharedPrefsWindowController = nil;
     [[self.window animator] setFrame:newFrame display:YES];
 
     [NSAnimationContext endGrouping];
-}
-
-- (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)aToolbar
-{
-    return [[aToolbar items] valueForKey:@"itemIdentifier"];
 }
 
 - (IBAction)beginFilePicker:(id)sender
