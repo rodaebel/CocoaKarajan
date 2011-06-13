@@ -124,7 +124,9 @@
 
     [fh readInBackgroundAndNotify];
 
-    self.netService = [[[NSNetService alloc] initWithDomain:@"" type:@"_osc._udp." name:@"Karajan" port:(int)preferences.incomingPort] autorelease];
+    NSString *serviceName = [NSString stringWithFormat:@"%@ (Karajan)", CSCopyMachineName()];
+
+    self.netService = [[[NSNetService alloc] initWithDomain:@"" type:@"_osc._udp." name:serviceName port:(int)preferences.incomingPort] autorelease];
     if (self.netService != nil) {
         [self.netService setDelegate:self];
         [self.netService publishWithOptions:0];
