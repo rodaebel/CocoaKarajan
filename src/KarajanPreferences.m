@@ -49,6 +49,15 @@ const NSInteger DEFAULT_OUTGOING_PORT = 7124;
     [self.window makeKeyAndOrderFront:self];
 }
 
+- (void)keyDown:(NSEvent *)theEvent
+{
+    if ([theEvent modifierFlags] & NSCommandKeyMask && [theEvent keyCode] == 13) {
+        [[self window] close];
+    } else {
+        [super keyDown:theEvent];
+    }
+}
+
 #pragma mark - NSToolbarDelegate Protocol Methods
 
 - (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)aToolbar
