@@ -92,7 +92,6 @@
     NSString *modulesPath = ([configPath length] == 0) ? @"" : [NSString stringWithFormat:@"--path=%@", [configPath stringByDeletingLastPathComponent]];
 
     KarajanPreferences *preferences = [KarajanPreferences sharedPrefsWindowController];
-    printf("%ld\n", preferences.incomingPort);
     NSString *incomingPort = [NSString stringWithFormat:@"--incoming-port=%ld", preferences.incomingPort];
 
     NSString *karajandConfig = [NSString stringWithFormat:@"--config=%@", configPath];
