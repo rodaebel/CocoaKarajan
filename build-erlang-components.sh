@@ -31,7 +31,7 @@ build_erlang()
   tar xvzf otp_src_${ERLANG_VERSION}.tar.gz
   cd otp_src_${ERLANG_VERSION}
   if [ "`uname -r | sed -e 's,\(\.[0-9].*$\),,'`" -eq "11" ]; then
-    export CC=/usr/bin/gcc-4.2
+    export CFLAGS=-O0
   fi
   ./configure $ERLANG_CONFIGURE_OPTS --prefix=$ERLANG_HOME
   make
