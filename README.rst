@@ -11,7 +11,7 @@ Karajan and additional modules.
 Copyright and License
 ---------------------
 
-Copyright 2011 Tobias Rodaebel
+Copyright 2011-2012 Tobias Rodaebel
 
 This software is released under the Apache License, Version 2.0. You may obtain
 a copy of the License at
@@ -26,7 +26,8 @@ Building the Cocoa Karajan project requires Mac OS X Snow Leopard and Xcode 4.
 In order to build and run the project, enter the following commands::
 
   $ make
-  $ ./build/Release/Karajan.app/Contents/MacOS/Karajan
+
+Run the Karajan application from the build products directory.
 
 Or use Xcode 4 to build the project. This requires the
 `build-erlang-components.sh` script to be manually executed.
