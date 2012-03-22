@@ -2,7 +2,7 @@
 
 CWD=`pwd`
 
-ERLANG_VERSION="R14B04"
+ERLANG_VERSION="R15B"
 
 ERLANG_DISTRIBUTION_URL="http://www.erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz"
 
