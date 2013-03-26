@@ -11,7 +11,7 @@ Karajan and additional modules.
 Copyright and License
 ---------------------
 
-Copyright 2011-2012 Tobias Rodaebel
+Copyright 2011-2013 Tobias Rodaebel
 
 This software is released under the Apache License, Version 2.0. You may obtain
 a copy of the License at
