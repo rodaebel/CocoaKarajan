@@ -141,23 +141,12 @@ const NSInteger DEFAULT_OUTGOING_PORT = 7124;
 
     panel.canChooseDirectories = NO;
     panel.canChooseFiles = YES;
-    [panel beginSheetForDirectory:nil
-                             file:nil
-                   modalForWindow:self.window
-                    modalDelegate:self
-                   didEndSelector:@selector(filePickerDidEnd:returnCode:context:)
-                      contextInfo:configPathTextField];
-}
-
-- (void)filePickerDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode context:(void *)context
-{
-    [panel orderOut:self];
-
-    if(returnCode == NSOKButton) {
-        NSTextField *field = context;
-        field.objectValue = panel.filename;
-        [[NSUserDefaults standardUserDefaults] setValue:panel.filename forKey:@"configPath"];
-    }
+		[panel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
+			if (result == NSOKButton) {
+        configPathTextField.objectValue = panel.URL.path;
+        [[NSUserDefaults standardUserDefaults] setValue:panel.URL.path forKey:@"configPath"];
+			}
+		}];
 }
 
 - (IBAction)restoreDefaults:(id)sender

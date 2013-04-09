@@ -6,7 +6,8 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface KarajanPreferences : NSWindowController <NSToolbarDelegate> {
+@interface KarajanPreferences : NSWindowController <NSToolbarDelegate>
+{
 @private
     IBOutlet NSToolbar *toolbar;
     IBOutlet NSView *generalPreferenceView;
@@ -30,8 +31,6 @@
 - (NSRect)newFrameForNewContentView:(NSView *)view;
 
 - (IBAction)beginFilePicker:(id)sender;
-
-- (void)filePickerDidEnd:(NSSavePanel *)save returnCode:(int)returnCode context:(void*)context;
 
 - (IBAction)restoreDefaults:(id)sender;
 

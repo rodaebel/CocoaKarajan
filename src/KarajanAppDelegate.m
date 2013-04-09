@@ -2,8 +2,6 @@
 //  KarajanAppDelegate.m
 //  Karajan
 //
-//  Copyright 2011, Tobias Rodaebel
-//
 
 #import "KarajanAppDelegate.h"
 #import "KarajanPreferences.h"
@@ -124,7 +122,7 @@
 
     [fh readInBackgroundAndNotify];
 
-    NSString *serviceName = [NSString stringWithFormat:@"%@ (Karajan)", CSCopyMachineName()];
+    NSString *serviceName = [NSString stringWithFormat:@"%@ (Karajan)", [[NSHost currentHost] localizedName]];
 
     self.netService = [[[NSNetService alloc] initWithDomain:@"" type:@"_osc._udp." name:serviceName port:(int)preferences.incomingPort] autorelease];
     if (self.netService != nil) {

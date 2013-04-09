@@ -2,12 +2,11 @@
 //  KarajanAppDelegate.h
 //  Karajan
 //
-//  Copyright 2011, Tobias Rodaebel
-//
 
 #import <Cocoa/Cocoa.h>
 
-@interface KarajanAppDelegate : NSObject <NSApplicationDelegate, NSNetServiceDelegate> {
+@interface KarajanAppDelegate : NSObject <NSApplicationDelegate, NSNetServiceDelegate>
+{
 @private
     IBOutlet NSMenu *       statusMenu;
     IBOutlet NSMenuItem *   toggleServingMenuItem;
