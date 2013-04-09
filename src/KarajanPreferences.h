@@ -9,11 +9,11 @@
 @interface KarajanPreferences : NSWindowController <NSToolbarDelegate>
 {
 @private
-    IBOutlet NSToolbar *toolbar;
-    IBOutlet NSView *generalPreferenceView;
-    IBOutlet NSView *advancedPreferenceView;
-    int currentViewTag;
-    IBOutlet NSTextField *configPathTextField;
+	IBOutlet NSToolbar *toolbar;
+	IBOutlet NSView *generalPreferenceView;
+	IBOutlet NSView *advancedPreferenceView;
+	int currentViewTag;
+	IBOutlet NSTextField *configPathTextField;
 }
 
 @property (getter = getIncomingPort, setter = setIncomingPort:) NSInteger incomingPort;

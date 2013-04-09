@@ -8,17 +8,17 @@
 @interface KarajanAppDelegate : NSObject <NSApplicationDelegate, NSNetServiceDelegate>
 {
 @private
-    IBOutlet NSMenu *       statusMenu;
-    IBOutlet NSMenuItem *   toggleServingMenuItem;
-    NSStatusItem *          statusItem;
-    NSString *              toggleServingMenuItemLabel;
+	IBOutlet NSMenu *statusMenu;
+	IBOutlet NSMenuItem *toggleServingMenuItem;
+	NSStatusItem *statusItem;
+	NSString *toggleServingMenuItemLabel;
 
-    NSPipe *                p_in;
-    NSPipe *                p_out;
-    NSTask *                task;
+	NSPipe *p_in;
+	NSPipe *p_out;
+	NSTask *task;
 
-    BOOL                    _serving;
-    NSNetService *          _netService;
+	BOOL _serving;
+	NSNetService *_netService;
 }
 
 @property (readonly) NSString *toggleServingMenuItemLabel;
