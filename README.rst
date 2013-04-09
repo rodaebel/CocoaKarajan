@@ -22,7 +22,7 @@ a copy of the License at
 Building and Running
 --------------------
 
-Building the Cocoa Karajan project requires Mac OS X Snow Leopard and Xcode 4.
+Building the Cocoa Karajan project requires Mac OS X Mountain Lion and Xcode.
 In order to build and run the project, enter the following commands::
 
   $ make
