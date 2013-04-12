@@ -23,8 +23,8 @@
 {
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 	[statusItem setMenu:statusMenu];
-	[statusItem setImage:[NSImage imageNamed:@"Karajan.png"]];
-	[statusItem setAlternateImage:[NSImage imageNamed:@"Karajan_alt.png"]];
+	[statusItem setImage:[NSImage imageNamed:@"Karajan"]];
+	[statusItem setAlternateImage:[NSImage imageNamed:@"Karajan_alt"]];
 	[statusItem setHighlightMode:YES];
 }
 

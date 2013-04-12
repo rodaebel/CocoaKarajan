@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBE119EA171712B500707E93 /* Karajan_alt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE119E8171712B500707E93 /* Karajan_alt@2x.png */; };
+		EBE119EB171712B500707E93 /* Karajan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE119E9171712B500707E93 /* Karajan@2x.png */; };
 		F65FFD54139B974C00E0C782 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = F65FFD53139B974C00E0C782 /* lib */; };
 		F65FFD58139BB62900E0C782 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F65FFD56139BB62900E0C782 /* Localizable.strings */; };
 		F69C6AF5139AEB71004A4063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69C6AF4139AEB71004A4063 /* Cocoa.framework */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EBE119E8171712B500707E93 /* Karajan_alt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Karajan_alt@2x.png"; path = "src/Karajan_alt@2x.png"; sourceTree = SOURCE_ROOT; };
+		EBE119E9171712B500707E93 /* Karajan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Karajan@2x.png"; path = "src/Karajan@2x.png"; sourceTree = SOURCE_ROOT; };
 		F65FFD53139B974C00E0C782 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = SOURCE_ROOT; };
 		F65FFD57139BB62900E0C782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		F69C6AF0139AEB71004A4063 /* Karajan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karajan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +118,9 @@
 			children = (
 				F65FFD56139BB62900E0C782 /* Localizable.strings */,
 				F6FE1561139AF91E002D0EF8 /* Karajan.png */,
+				EBE119E9171712B500707E93 /* Karajan@2x.png */,
 				F6BE06FD139B5FF900282C2D /* Karajan_alt.png */,
+				EBE119E8171712B500707E93 /* Karajan_alt@2x.png */,
 				F69C6AFC139AEB71004A4063 /* Karajan-Info.plist */,
 				F69C6AFD139AEB71004A4063 /* InfoPlist.strings */,
 				F69C6B00139AEB71004A4063 /* Karajan-Prefix.pch */,
@@ -192,6 +198,8 @@
 				F65FFD54139B974C00E0C782 /* lib in Resources */,
 				F65FFD58139BB62900E0C782 /* Localizable.strings in Resources */,
 				F6A9E84313A2C23F00BEA54C /* Preferences.xib in Resources */,
+				EBE119EA171712B500707E93 /* Karajan_alt@2x.png in Resources */,
+				EBE119EB171712B500707E93 /* Karajan@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
