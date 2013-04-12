@@ -228,21 +228,26 @@
 					<object class="NSButton" id="1001272188">
 						<reference key="NSNextResponder" ref="603113196"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{185, 18}, {110, 19}}</string>
+						<string key="NSFrame">{{171, 13}, {138, 32}}</string>
 						<reference key="NSSuperview" ref="603113196"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="462187260">
 							<int key="NSCellFlags">-2080374784</int>
 							<int key="NSCellFlags2">134217728</int>
 							<string key="NSContents">Restore Defaults</string>
-							<object class="NSFont" key="NSSupport">
+							<object class="NSFont" key="NSSupport" id="629006775">
 								<string key="NSName">LucidaGrande</string>
-								<double key="NSSize">12</double>
-								<int key="NSfFlags">16</int>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">1044</int>
 							</object>
 							<reference key="NSControlView" ref="1001272188"/>
-							<int key="NSButtonFlags">-2038153216</int>
-							<int key="NSButtonFlags2">164</int>
+							<int key="NSButtonFlags">-2038022144</int>
+							<int key="NSButtonFlags2">129</int>
+							<object class="NSFont" key="NSAlternateImage">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">16</int>
+							</object>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">400</int>
@@ -322,11 +327,7 @@
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents">Configuration File:</string>
-							<object class="NSFont" key="NSSupport" id="629006775">
-								<string key="NSName">LucidaGrande</string>
-								<double key="NSSize">13</double>
-								<int key="NSfFlags">1044</int>
-							</object>
+							<reference key="NSSupport" ref="629006775"/>
 							<reference key="NSControlView" ref="550359901"/>
 							<object class="NSColor" key="NSBackgroundColor" id="818082842">
 								<int key="NSColorSpace">6</int>
@@ -353,7 +354,7 @@
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSCustomView" id="1011231484">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="253320016">
@@ -510,7 +511,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{480, 92}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="943115083"/>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -745,10 +745,10 @@
 						<int key="objectID">24</int>
 						<reference key="object" ref="603113196"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="1001272188"/>
 							<reference ref="550359901"/>
 							<reference ref="732066032"/>
 							<reference ref="870446804"/>
+							<reference ref="1001272188"/>
 						</array>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">General</string>
@@ -954,6 +954,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="beginFilePicker:">id</string>
 						<string key="restoreDefaults:">id</string>
+						<string key="showWindow:">id</string>
 						<string key="switchView:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -963,6 +964,10 @@
 						</object>
 						<object class="IBActionInfo" key="restoreDefaults:">
 							<string key="name">restoreDefaults:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showWindow:">
+							<string key="name">showWindow:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="switchView:">
