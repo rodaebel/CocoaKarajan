@@ -29,7 +29,7 @@ In order to build and run the project, enter the following commands::
 
 Run the Karajan application from the build products directory.
 
-Or use Xcode 4 to build the project. This requires the
+Or use Xcode 5 to build the project. This requires the
 `build-erlang-components.sh` script to be manually executed.
 
 

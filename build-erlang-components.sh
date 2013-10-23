@@ -2,7 +2,7 @@
 
 CWD=`pwd`
 
-ERLANG_VERSION="R16B"
+ERLANG_VERSION="R16B02"
 
 ERLANG_DISTRIBUTION_URL="http://www.erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz"
 
@@ -34,6 +34,7 @@ build_erlang()
     export CFLAGS=-O0
   fi
   ./configure $ERLANG_CONFIGURE_OPTS --prefix=$ERLANG_HOME
+  touch lib/odbc/SKIP
   make
   make install
   cd -
